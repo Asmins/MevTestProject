@@ -20,63 +20,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name of movie" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUG-b4-6dd" customClass="CustomTextField" customModule="MEVTestProject" customModuleProvider="target">
-                                <rect key="frame" x="20" y="316" width="335" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="W2c-aT-cTS"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter name of movie what you would like find" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDS-Gd-VRU">
-                                <rect key="frame" x="15" y="241" width="345" height="55"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7y-5T-Idk">
-                                <rect key="frame" x="20" y="370" width="335" height="37"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="18"/>
-                                <state key="normal" title="Search"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moviebackground" translatesAutoresizingMaskIntoConstraints="NO" id="a44-Am-KaE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moviebackground" translatesAutoresizingMaskIntoConstraints="NO" id="a44-Am-KaE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7B-t6-bQd">
+                                <rect key="frame" x="35" y="134" width="305" height="234"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter name of movie what you would like find" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="HDS-Gd-VRU">
+                                        <rect key="frame" x="0.0" y="10" width="305" height="55"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLightItalic" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of movie" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUG-b4-6dd">
+                                        <rect key="frame" x="0.0" y="104.5" width="305" height="25"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="HDS-Gd-VRU" firstAttribute="leading" secondItem="n7B-t6-bQd" secondAttribute="leading" id="2De-1Y-dwi"/>
+                                    <constraint firstItem="UUG-b4-6dd" firstAttribute="centerX" secondItem="n7B-t6-bQd" secondAttribute="centerX" id="57q-4H-5Tb"/>
+                                    <constraint firstAttribute="trailing" secondItem="UUG-b4-6dd" secondAttribute="trailing" id="8LE-D1-yDK"/>
+                                    <constraint firstItem="HDS-Gd-VRU" firstAttribute="top" secondItem="n7B-t6-bQd" secondAttribute="top" constant="10" id="TMl-yF-kre"/>
+                                    <constraint firstItem="UUG-b4-6dd" firstAttribute="leading" secondItem="n7B-t6-bQd" secondAttribute="leading" id="cn7-oB-y7S"/>
+                                    <constraint firstAttribute="trailing" secondItem="HDS-Gd-VRU" secondAttribute="trailing" id="gY1-d6-PRc"/>
+                                    <constraint firstItem="UUG-b4-6dd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HDS-Gd-VRU" secondAttribute="bottom" constant="5" id="oAf-s0-Whb"/>
+                                    <constraint firstItem="UUG-b4-6dd" firstAttribute="centerY" secondItem="n7B-t6-bQd" secondAttribute="centerY" id="pdB-bZ-S1g"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7y-5T-Idk">
+                                <rect key="frame" x="20" y="418" width="335" height="40"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchMovieTap:" destination="4QH-FB-aKN" eventType="touchUpInside" id="6wk-es-rwW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="D7y-5T-Idk" firstAttribute="top" secondItem="UUG-b4-6dd" secondAttribute="bottom" constant="20" id="5mO-BL-W9a"/>
-                            <constraint firstAttribute="trailing" secondItem="UUG-b4-6dd" secondAttribute="trailing" constant="20" id="7u3-nu-ofd"/>
-                            <constraint firstItem="D7y-5T-Idk" firstAttribute="leading" secondItem="7Oc-cA-Ogf" secondAttribute="leading" constant="20" id="F1h-0u-u0u"/>
+                            <constraint firstItem="n7B-t6-bQd" firstAttribute="leading" secondItem="7Oc-cA-Ogf" secondAttribute="leading" constant="35" id="9w6-6w-5GX"/>
+                            <constraint firstAttribute="trailing" secondItem="n7B-t6-bQd" secondAttribute="trailing" constant="35" id="Emo-v3-N3v"/>
                             <constraint firstItem="8FC-Jp-LFB" firstAttribute="top" secondItem="a44-Am-KaE" secondAttribute="bottom" id="Jja-fi-tfR"/>
-                            <constraint firstAttribute="trailing" secondItem="D7y-5T-Idk" secondAttribute="trailing" constant="20" id="OEm-x5-Nyf"/>
-                            <constraint firstItem="UUG-b4-6dd" firstAttribute="centerX" secondItem="7Oc-cA-Ogf" secondAttribute="centerX" id="QOP-Kt-a1l"/>
-                            <constraint firstItem="HDS-Gd-VRU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wzm-Qn-7J1" secondAttribute="bottom" constant="20" id="Qvr-6k-flL"/>
+                            <constraint firstItem="n7B-t6-bQd" firstAttribute="top" secondItem="Wzm-Qn-7J1" secondAttribute="bottom" constant="70" id="Lg6-aB-dtg"/>
+                            <constraint firstItem="8FC-Jp-LFB" firstAttribute="top" secondItem="D7y-5T-Idk" secondAttribute="bottom" constant="160" id="QYw-Q9-6dL"/>
+                            <constraint firstItem="D7y-5T-Idk" firstAttribute="top" secondItem="n7B-t6-bQd" secondAttribute="bottom" constant="50" id="Yfx-EG-ULP"/>
                             <constraint firstItem="a44-Am-KaE" firstAttribute="leading" secondItem="7Oc-cA-Ogf" secondAttribute="leading" id="cjP-kv-yZC"/>
                             <constraint firstAttribute="trailing" secondItem="a44-Am-KaE" secondAttribute="trailing" id="cmq-CZ-FEQ"/>
                             <constraint firstItem="a44-Am-KaE" firstAttribute="top" secondItem="Wzm-Qn-7J1" secondAttribute="bottom" id="k0X-ZK-j5H"/>
-                            <constraint firstAttribute="trailing" secondItem="HDS-Gd-VRU" secondAttribute="trailing" constant="15" id="oSV-td-txt"/>
-                            <constraint firstItem="HDS-Gd-VRU" firstAttribute="leading" secondItem="7Oc-cA-Ogf" secondAttribute="leading" constant="15" id="pAk-40-sh0"/>
-                            <constraint firstItem="UUG-b4-6dd" firstAttribute="top" secondItem="HDS-Gd-VRU" secondAttribute="bottom" constant="20" id="pgj-Ct-b1h"/>
-                            <constraint firstItem="UUG-b4-6dd" firstAttribute="leading" secondItem="7Oc-cA-Ogf" secondAttribute="leading" constant="20" id="ycp-xg-0lS"/>
-                            <constraint firstItem="UUG-b4-6dd" firstAttribute="centerY" secondItem="7Oc-cA-Ogf" secondAttribute="centerY" id="zeG-sy-VLI"/>
+                            <constraint firstAttribute="trailing" secondItem="D7y-5T-Idk" secondAttribute="trailing" constant="20" id="rQi-n0-Ejd"/>
+                            <constraint firstItem="D7y-5T-Idk" firstAttribute="leading" secondItem="7Oc-cA-Ogf" secondAttribute="leading" constant="20" id="uo3-ae-pe2"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="UUG-b4-6dd"/>
-                                <exclude reference="HDS-Gd-VRU"/>
-                                <exclude reference="D7y-5T-Idk"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="Search-30" id="e7e-Ne-IDi"/>
                     <navigationItem key="navigationItem" id="dqn-Em-1SU"/>
+                    <connections>
+                        <outlet property="nameMovieTextField" destination="UUG-b4-6dd" id="jzb-fw-c0g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swA-rB-qIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,7 +128,7 @@
         <!--Item-->
         <scene sceneID="gKm-xg-VtY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MTV-7R-sN6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MTV-7R-sN6" customClass="BlackNavigationController" customModule="MEVTestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="WB3-Mi-3T9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eSZ-TA-Fcf">

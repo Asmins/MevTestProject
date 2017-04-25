@@ -11,6 +11,7 @@ import UIKit
 class SearchViewController: UIViewController {
 
     fileprivate var viewModel: SearchViewModel?
+    @IBOutlet weak var nameMovieTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,10 @@ class SearchViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.setCustomTitle(self)
+    }
+
+    @IBAction func searchMovieTap(_ sender: Any) {
+        self.viewModel?.sendMovieRequest(nameMovieTextField.text!)
     }
 
 }

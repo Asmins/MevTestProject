@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		631646C7D91B1B09C972F8A7 /* Pods_MEVTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F1F95FC5E5BE42D0D14ECF /* Pods_MEVTestProject.framework */; };
+		820BCCD51EAF991B00E0139D /* BlackNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820BCCD41EAF991B00E0139D /* BlackNavigationController.swift */; };
 		8253D2041EAF581800275D94 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8253D2031EAF581800275D94 /* SearchViewController.swift */; };
 		8253D2061EAF584700275D94 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8253D2051EAF584700275D94 /* SearchViewModel.swift */; };
 		8253D2091EAF5D1900275D94 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8253D2081EAF5D1900275D94 /* Movie.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		11F1F95FC5E5BE42D0D14ECF /* Pods_MEVTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MEVTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		820BCCD41EAF991B00E0139D /* BlackNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackNavigationController.swift; sourceTree = "<group>"; };
 		8253D2031EAF581800275D94 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8253D2051EAF584700275D94 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		8253D2081EAF5D1900275D94 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				82B4CF861EAF62870003391D /* AlertViewController.swift */,
 				82B4CF901EAF77270003391D /* TabBarController.swift */,
 				82B4CF921EAF7D900003391D /* CustomTextField.swift */,
+				820BCCD41EAF991B00E0139D /* BlackNavigationController.swift */,
 			);
 			name = Extension;
 			path = Extensions;
@@ -323,6 +326,7 @@
 				82B4CF911EAF77270003391D /* TabBarController.swift in Sources */,
 				82B4CF8F1EAF71F00003391D /* HistorySearchViewModel.swift in Sources */,
 				8285A8231EAF529C00A125E2 /* ServiceRequest.swift in Sources */,
+				820BCCD51EAF991B00E0139D /* BlackNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
