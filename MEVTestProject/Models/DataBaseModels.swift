@@ -19,4 +19,8 @@ class Film: Object {
     dynamic var titleFilm = ""
     dynamic var dateReleased = ""
     dynamic var posterURL = ""
+    dynamic var genre = ""
+    dynamic var infoAbout = ""
+    dynamic var actors = ""
+
 }

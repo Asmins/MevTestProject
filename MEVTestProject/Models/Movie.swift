@@ -12,11 +12,17 @@ class Movie {
     private var nameMovie: String!
     private var dateMovie: String!
     private var posterURL: String!
+    private var genre: String!
+    private var infoAbout: String!
+    private var actors: String!
 
-    init(_ name: String, date: String, url: String) {
+    init(_ name: String, date: String, url: String, genre: String, info: String, actors: String) {
         self.nameMovie = name
         self.dateMovie = date
         self.posterURL = url
+        self.genre = genre
+        self.infoAbout = info
+        self.actors = actors
     }
 
     func getNameMovie() -> String {
@@ -31,5 +37,15 @@ class Movie {
         return self.posterURL
     }
 
+    func getGenre() -> String {
+        return self.genre
+    }
 
+    func getInfo() -> String {
+        return self.infoAbout
+    }
+
+    func getActors() -> String {
+        return self.actors
+    }
 }

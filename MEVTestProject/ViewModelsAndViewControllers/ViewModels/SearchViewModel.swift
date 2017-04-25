@@ -22,6 +22,7 @@ class SearchViewModel {
     }
 
     func sendMovieRequest(_ title: String) {
+        self.view.showActivityIndicator()
         let empty = self.checkToEmpty(title)
 
         if empty  {
@@ -30,6 +31,7 @@ class SearchViewModel {
                                              "page":10,
                                              "r": "json"]
             self.requestService.sendRequestForGetMovie(parameters: parameters, headers: [:], result: {( data, error ) in
+                self.view.hiddenActivityIndicator()
                 if data != nil {
                     self.parserService.parsResult(data!)
                 } else {

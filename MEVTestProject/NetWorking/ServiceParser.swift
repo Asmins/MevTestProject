@@ -29,7 +29,11 @@ class ServiceParser {
             let urlPoster = json["Poster"].stringValue
             let released = json["Released"].stringValue
             let title = json["Title"].stringValue
-            movie = Movie(title, date: released, url: urlPoster)
+            let genre = json["Genre"].stringValue
+            let info = json["Plot"].stringValue
+            let actors = json["Actors"].stringValue
+            movie = Movie(title, date: released, url: urlPoster,
+                          genre: genre, info: info, actors: actors)
             delegate.transfer(movie: movie!)
         }
     }
