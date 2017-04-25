@@ -20,4 +20,8 @@ class DetailMovieViewController: UIViewController {
         self.tabBarController?.setCustomTitle(self)
     }
 
+    func getMovie(_ movie: Movie) {
+        print(movie)
+    }
+
 }

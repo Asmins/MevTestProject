@@ -46,10 +46,14 @@ class SearchViewModel {
         }
     }
 
+    fileprivate func openDetailViewController(_ movie: Movie) {
+        self.view.openDetailViewController(movie)
+    }
+
 }
 
 extension SearchViewModel: TransferResult {
-    func transfer() {
-        print("saf")
+    func transfer(movie: Movie) {
+        self.openDetailViewController(movie)
     }
 }

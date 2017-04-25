@@ -109,7 +109,7 @@
         <!--Detail-->
         <scene sceneID="LPF-0w-uEe">
             <objects>
-                <viewController id="Q0x-b4-hP5" customClass="DetailMovieViewController" customModule="MEVTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Q0x-b4-hP5" customClass="DetailMovieViewController" customModule="MEVTestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NKp-WI-MXg"/>
                         <viewControllerLayoutGuide type="bottom" id="MUA-vP-C3E"/>

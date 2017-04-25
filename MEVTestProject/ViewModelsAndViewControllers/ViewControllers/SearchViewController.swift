@@ -36,4 +36,10 @@ extension SearchViewController {
         let alertController = AlertController().showAlertWith(text)
         self.present(alertController, animated: true, completion: nil)
     }
+
+    func openDetailViewController(_ movie: Movie) {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailMovieViewController
+        controller.getMovie(movie)
+        self.tabBarController?.selectedIndex = 1
+    }
 }
