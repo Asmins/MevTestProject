@@ -12,26 +12,13 @@ import RealmSwift
 class SearchViewController: UIViewController {
 
     fileprivate var viewModel: SearchViewModel?
+
     @IBOutlet weak var nameMovieTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SearchViewModel(self)
-        print(Realm.Configuration.defaultConfiguration.fileURL)
-
-//        let request = Request()
-//        let film = Film()
-//        film.titleFilm = "New Title"
-//        film.dateReleased = "Today"
-//        film.posterURL = "Some"
-//        request.title = "New Title"
-//        request.film = film
-//        let realm = try! Realm()
-//
-//        try! realm.write {
-//            realm.add(request)
-//        }
-        //self.viewModel?.sendMovieRequest("Harry Potter and Deathly Hallows")
+        print("PATH WHERE YOU CAN FIND FILES BD \(Realm.Configuration.defaultConfiguration.fileURL!)")
         // Do any additional setup after loading the view.
     }
 

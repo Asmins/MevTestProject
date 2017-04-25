@@ -26,6 +26,7 @@
 		82B4CF911EAF77270003391D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4CF901EAF77270003391D /* TabBarController.swift */; };
 		82B4CF931EAF7D900003391D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4CF921EAF7D900003391D /* CustomTextField.swift */; };
 		82F188471EAFB76D0081A016 /* DataBaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F188461EAFB76D0081A016 /* DataBaseModels.swift */; };
+		82F1884A1EAFBB440081A016 /* ServiceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F188491EAFBB440081A016 /* ServiceDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		82B4CF901EAF77270003391D /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		82B4CF921EAF7D900003391D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		82F188461EAFB76D0081A016 /* DataBaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseModels.swift; sourceTree = "<group>"; };
+		82F188491EAFBB440081A016 /* ServiceDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDatabase.swift; sourceTree = "<group>"; };
 		8F3ED6A21A248DC8EDEDE270 /* Pods-MEVTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEVTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MEVTestProject/Pods-MEVTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		DB6952217F650292C33ED210 /* Pods-MEVTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEVTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MEVTestProject/Pods-MEVTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 		8285A8011EAF516100A125E2 /* MEVTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				82F188481EAFBB120081A016 /* ServiceDatabase */,
 				82B4CF851EAF626A0003391D /* Extension */,
 				8253D2071EAF5CED00275D94 /* Models */,
 				8285A8211EAF528700A125E2 /* NetWorking */,
@@ -191,6 +194,14 @@
 			);
 			name = Extension;
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		82F188481EAFBB120081A016 /* ServiceDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				82F188491EAFBB440081A016 /* ServiceDatabase.swift */,
+			);
+			path = ServiceDatabase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 				8253D2061EAF584700275D94 /* SearchViewModel.swift in Sources */,
 				8253D2091EAF5D1900275D94 /* Movie.swift in Sources */,
 				82B4CF891EAF71B30003391D /* DetailMovieViewController.swift in Sources */,
+				82F1884A1EAFBB440081A016 /* ServiceDatabase.swift in Sources */,
 				8285A8171EAF51C400A125E2 /* AppDelegate.swift in Sources */,
 				82B4CF8D1EAF71D40003391D /* DetailMovieViewModel.swift in Sources */,
 				8253D2041EAF581800275D94 /* SearchViewController.swift in Sources */,

@@ -12,6 +12,9 @@ class SearchViewModel {
     private var requestService = ServiceRequest()
     private var parserService = ServiceParser()
     private var view: SearchViewController!
+    fileprivate let serviceDataBase = ServiceDatabase()
+
+    fileprivate var textRequest: String?
 
     init(_ view: SearchViewController) {
         self.view = view
@@ -42,6 +45,7 @@ class SearchViewModel {
         if title == "" {
             return false
         } else {
+            self.textRequest = title
             return true
         }
     }
@@ -50,10 +54,19 @@ class SearchViewModel {
         self.view.openDetailViewController(movie)
     }
 
+    fileprivate func showAlert() {
+        self.view.showAlertWith("Movie not found!")
+    }
+
 }
 
 extension SearchViewModel: TransferResult {
-    func transfer(movie: Movie) {
-        self.openDetailViewController(movie)
+    func transfer(movie: Movie?) {
+        if movie != nil {
+            self.serviceDataBase.appenNewObjectsdDataBase(textRequest!, movie: movie!)
+            self.openDetailViewController(movie!)
+        } else {
+            self.showAlert()
+        }
     }
 }
