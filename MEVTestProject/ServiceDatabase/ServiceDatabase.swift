@@ -65,12 +65,8 @@ class ServiceDatabase {
         return arrayResult
     }
 
-
-//    func getObjectFromDataBase() -> [String] {
-//        let historyRequest = realm.objects(Request)
-//        for value in historyRequest {
-//            print(value.title)
-//        }
-//    }
+    func getObjectFromDataBase() -> Results<Request> {
+        return realm.objects(Request.self)
+    }
 
 }
