@@ -37,7 +37,7 @@
                                 <rect key="frame" x="35" y="134" width="305" height="234"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter name of movie what you would like find" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="HDS-Gd-VRU">
-                                        <rect key="frame" x="0.0" y="10" width="305" height="55"/>
+                                        <rect key="frame" x="5" y="10" width="295" height="55"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -51,12 +51,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="HDS-Gd-VRU" firstAttribute="leading" secondItem="n7B-t6-bQd" secondAttribute="leading" id="2De-1Y-dwi"/>
+                                    <constraint firstItem="HDS-Gd-VRU" firstAttribute="leading" secondItem="n7B-t6-bQd" secondAttribute="leading" constant="5" id="2De-1Y-dwi"/>
                                     <constraint firstItem="UUG-b4-6dd" firstAttribute="centerX" secondItem="n7B-t6-bQd" secondAttribute="centerX" id="57q-4H-5Tb"/>
                                     <constraint firstAttribute="trailing" secondItem="UUG-b4-6dd" secondAttribute="trailing" id="8LE-D1-yDK"/>
                                     <constraint firstItem="HDS-Gd-VRU" firstAttribute="top" secondItem="n7B-t6-bQd" secondAttribute="top" constant="10" id="TMl-yF-kre"/>
                                     <constraint firstItem="UUG-b4-6dd" firstAttribute="leading" secondItem="n7B-t6-bQd" secondAttribute="leading" id="cn7-oB-y7S"/>
-                                    <constraint firstAttribute="trailing" secondItem="HDS-Gd-VRU" secondAttribute="trailing" id="gY1-d6-PRc"/>
+                                    <constraint firstAttribute="trailing" secondItem="HDS-Gd-VRU" secondAttribute="trailing" constant="5" id="gY1-d6-PRc"/>
                                     <constraint firstItem="UUG-b4-6dd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HDS-Gd-VRU" secondAttribute="bottom" constant="5" id="oAf-s0-Whb"/>
                                     <constraint firstItem="UUG-b4-6dd" firstAttribute="centerY" secondItem="n7B-t6-bQd" secondAttribute="centerY" id="pdB-bZ-S1g"/>
                                 </constraints>
@@ -215,8 +215,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amx-di-Yaq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstly go to search screen or to history screen. Now you don`t have any movie for display." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdP-cr-3qJ">
-                                        <rect key="frame" x="20" y="236.5" width="335" height="82"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstly go to search screen or to history screen. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdP-cr-3qJ">
+                                        <rect key="frame" x="20" y="250" width="335" height="55"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>

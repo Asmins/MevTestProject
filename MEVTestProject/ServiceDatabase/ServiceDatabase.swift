@@ -30,7 +30,6 @@ class ServiceDatabase {
     }
 
     private func appendInDataBase() {
-
         try! realm.write {
             realm.add(self.request)
         }
@@ -42,8 +41,36 @@ class ServiceDatabase {
         self.appendInDataBase()
     }
 
-    func getObjectFromDataBase() {
-        print(realm.objects(Film))
+    func searchSampleRequestInDataBase(_ textRequest: String) -> Movie? {
+        let historyRequests = self.getHistoryRequests()
+
+        if historyRequests.contains(textRequest) {
+            let index = historyRequests.index(of: textRequest)
+            let request = realm.objects(Request.self)
+            let movieFromDataBase: Film = request[index!].film!
+            return Movie(movieFromDataBase.titleFilm, date: movieFromDataBase.dateReleased,
+                         url: movieFromDataBase.posterURL,genre: movieFromDataBase.genre,
+                         info: movieFromDataBase.infoAbout, actors: movieFromDataBase.actors)
+        } else {
+            return nil
+        }
     }
+
+    private func getHistoryRequests() -> [String] {
+        var arrayResult = [String]()
+        let historyRequest = realm.objects(Request.self)
+        for value in historyRequest {
+            arrayResult.append(value.title)
+        }
+        return arrayResult
+    }
+
+
+//    func getObjectFromDataBase() -> [String] {
+//        let historyRequest = realm.objects(Request)
+//        for value in historyRequest {
+//            print(value.title)
+//        }
+//    }
 
 }

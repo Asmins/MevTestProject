@@ -23,23 +23,28 @@ class SearchViewModel {
 
     func sendMovieRequest(_ title: String) {
         self.view.showActivityIndicator()
-        let empty = self.checkToEmpty(title)
-
-        if empty  {
-            let parameters: [String: Any] = ["t": title,
-                                             "apikey":"67996ced",
-                                             "page":10,
-                                             "r": "json"]
-            self.requestService.sendRequestForGetMovie(parameters: parameters, headers: [:], result: {( data, error ) in
-                self.view.hiddenActivityIndicator()
-                if data != nil {
-                    self.parserService.parsResult(data!)
-                } else {
-                    self.view.showAlertWith((error?.localizedDescription)!)
-                }
-            })
+        let serviceBD = ServiceDatabase()
+        let movie = serviceBD.searchSampleRequestInDataBase(title)
+        if movie != nil {
+            self.openDetailViewController(movie!)
         } else {
-            self.view.showAlertWith("Empty name of movie")
+            let empty = self.checkToEmpty(title)
+            if empty  {
+                let parameters: [String: Any] = ["t": title,
+                                                 "apikey":"67996ced",
+                                                 "page":10,
+                                                 "r": "json"]
+                self.requestService.sendRequestForGetMovie(parameters: parameters, headers: [:], result: {( data, error ) in
+                    self.view.hiddenActivityIndicator()
+                    if data != nil {
+                        self.parserService.parsResult(data!)
+                    } else {
+                        self.view.showAlertWith((error?.localizedDescription)!)
+                    }
+                })
+            } else {
+                self.view.showAlertWith("Empty name of movie")
+            }
         }
     }
 
