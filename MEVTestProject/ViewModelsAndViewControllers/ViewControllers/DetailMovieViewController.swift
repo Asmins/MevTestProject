@@ -24,11 +24,6 @@ class DetailMovieViewController: UIViewController {
 
     var viewModel = DetailMovieViewModel()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.viewModel.showOrHiddenPlaceholder(movie: movie
@@ -37,7 +32,6 @@ class DetailMovieViewController: UIViewController {
         }, secondAction: {
             self.showFeed()
         })
-
         self.tabBarController?.setCustomTitle(self)
     }
 
@@ -54,9 +48,7 @@ class DetailMovieViewController: UIViewController {
         self.infoAboutLabel.text = movie.getInfo()
         self.titleLabel.text = movie.getNameMovie()
     }
-}
 
-extension DetailMovieViewController {
     func showPlaceholder() {
         self.placeholderView.isHidden = false
         self.feedView.isHidden = true

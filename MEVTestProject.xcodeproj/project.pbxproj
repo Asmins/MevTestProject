@@ -26,6 +26,7 @@
 		82B4CF911EAF77270003391D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4CF901EAF77270003391D /* TabBarController.swift */; };
 		82B4CF931EAF7D900003391D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4CF921EAF7D900003391D /* CustomTextField.swift */; };
 		82DF09231EB226A100ACF0D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF09221EB226A100ACF0D1 /* Router.swift */; };
+		82DF09261EB228BB00ACF0D1 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF09251EB228BB00ACF0D1 /* Protocols.swift */; };
 		82F188471EAFB76D0081A016 /* DataBaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F188461EAFB76D0081A016 /* DataBaseModels.swift */; };
 		82F1884A1EAFBB440081A016 /* ServiceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F188491EAFBB440081A016 /* ServiceDatabase.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		82B4CF901EAF77270003391D /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		82B4CF921EAF7D900003391D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		82DF09221EB226A100ACF0D1 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		82DF09251EB228BB00ACF0D1 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		82F188461EAFB76D0081A016 /* DataBaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseModels.swift; sourceTree = "<group>"; };
 		82F188491EAFBB440081A016 /* ServiceDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDatabase.swift; sourceTree = "<group>"; };
 		8F3ED6A21A248DC8EDEDE270 /* Pods-MEVTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEVTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MEVTestProject/Pods-MEVTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		8285A81E1EAF524F00A125E2 /* ViewModelsAndViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				82DF09241EB228A200ACF0D1 /* Protocols */,
 				8285A8201EAF527500A125E2 /* ViewControllers */,
 				8285A81F1EAF526800A125E2 /* ViewModels */,
 			);
@@ -205,6 +208,14 @@
 				82DF09221EB226A100ACF0D1 /* Router.swift */,
 			);
 			path = RoutingViewControllers;
+			sourceTree = "<group>";
+		};
+		82DF09241EB228A200ACF0D1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				82DF09251EB228BB00ACF0D1 /* Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		82F188481EAFBB120081A016 /* ServiceDatabase */ = {
@@ -341,6 +352,7 @@
 				82B4CF931EAF7D900003391D /* CustomTextField.swift in Sources */,
 				8285A8251EAF52B300A125E2 /* ServiceParser.swift in Sources */,
 				82B4CF871EAF62870003391D /* AlertViewController.swift in Sources */,
+				82DF09261EB228BB00ACF0D1 /* Protocols.swift in Sources */,
 				8253D2061EAF584700275D94 /* SearchViewModel.swift in Sources */,
 				8253D2091EAF5D1900275D94 /* Movie.swift in Sources */,
 				82B4CF891EAF71B30003391D /* DetailMovieViewController.swift in Sources */,

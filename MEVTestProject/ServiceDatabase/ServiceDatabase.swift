@@ -68,5 +68,4 @@ class ServiceDatabase {
     func getObjectFromDataBase() -> Results<Request> {
         return realm.objects(Request.self)
     }
-
 }

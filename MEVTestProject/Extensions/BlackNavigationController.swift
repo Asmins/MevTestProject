@@ -9,6 +9,7 @@ import UIKit
 import Foundation
 
 class BlackNavigationController: UINavigationController {
+
     override func awakeFromNib() {
         self.settingBlackNavController()
     }

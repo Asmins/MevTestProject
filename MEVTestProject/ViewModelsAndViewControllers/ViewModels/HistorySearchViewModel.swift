@@ -8,10 +8,6 @@
 import RealmSwift
 import Foundation
 
-protocol HistoryAction {
-    func openFeedScreen(_ movie: Movie)
-}
-
 class HistorySearchViewModel {
     var delegate: HistoryAction?
     var result: Results<Request>?

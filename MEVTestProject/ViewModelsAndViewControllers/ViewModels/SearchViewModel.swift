@@ -8,17 +8,9 @@
 
 import Foundation
 
-protocol AtionFromViewController {
-    func showAlertWith(_ text: String)
-    func openDetailViewController(_ movie: Movie?)
-    func showActivityView()
-    func hiddenActivityView()
-}
-
 class SearchViewModel {
     private var requestService = ServiceRequest()
     private var parserService = ServiceParser()
-    //private var view: SearchViewController!
     fileprivate let serviceDataBase = ServiceDatabase()
 
     fileprivate var textRequest: String?
