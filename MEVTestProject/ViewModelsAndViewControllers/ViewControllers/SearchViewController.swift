@@ -18,17 +18,17 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var placeholderLabel: UILabel!
     // End
-
+    fileprivate var router = Router()
     fileprivate var viewModel: SearchViewModel?
 
     @IBOutlet weak var nameMovieTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = SearchViewModel(self)
+        viewModel = SearchViewModel()
+        viewModel?.delegate = self
         self.hiddenActivityIndicator()
         print("PATH WHERE YOU CAN FIND FILES BD \(Realm.Configuration.defaultConfiguration.fileURL!)")
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -43,23 +43,7 @@ class SearchViewController: UIViewController {
     }
 
     @IBAction func searchMovieTap(_ sender: Any) {
-        self.viewModel?.sendMovieRequest(nameMovieTextField.text!)
-    }
-
-}
-
-extension SearchViewController {
-    func showAlertWith(_ text: String) {
-        let alertController = AlertController().showAlertWith(text)
-        self.present(alertController, animated: true, completion: nil)
-    }
-
-    func showActivityIndicator() {
-        searchButton.isHidden = true
-        projectVIew.isHidden = true
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
-        placeholderLabel.isHidden = false
+       self.viewModel?.sendMovieRequest(nameMovieTextField.text!)
     }
 
     func hiddenActivityIndicator() {
@@ -69,10 +53,31 @@ extension SearchViewController {
         activityIndicator.stopAnimating()
         placeholderLabel.isHidden = true
     }
+}
 
-    func openDetailViewController(_ movie: Movie) {
-        let controller = self.tabBarController?.viewControllers?[1] as! DetailMovieViewController
-        controller.movie = movie
-        self.tabBarController?.selectedIndex = 1
+extension SearchViewController: AtionFromViewController {
+    func showAlertWith(_ text: String) {
+        let alertController = AlertController().showAlertWith(text)
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    func showActivityView() {
+        searchButton.isHidden = true
+        projectVIew.isHidden = true
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        placeholderLabel.isHidden = false
+    }
+
+    func hiddenActivityView() {
+        searchButton.isHidden = false
+        projectVIew.isHidden = false
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
+        placeholderLabel.isHidden = true
+    }
+
+    func openDetailViewController(_ movie: Movie?) {
+        self.router.openDetailViewController(movie!, viewController: self)
     }
 }

@@ -25,6 +25,7 @@
 		82B4CF8F1EAF71F00003391D /* HistorySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4CF8E1EAF71F00003391D /* HistorySearchViewModel.swift */; };
 		82B4CF911EAF77270003391D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4CF901EAF77270003391D /* TabBarController.swift */; };
 		82B4CF931EAF7D900003391D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4CF921EAF7D900003391D /* CustomTextField.swift */; };
+		82DF09231EB226A100ACF0D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF09221EB226A100ACF0D1 /* Router.swift */; };
 		82F188471EAFB76D0081A016 /* DataBaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F188461EAFB76D0081A016 /* DataBaseModels.swift */; };
 		82F1884A1EAFBB440081A016 /* ServiceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F188491EAFBB440081A016 /* ServiceDatabase.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		82B4CF8E1EAF71F00003391D /* HistorySearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorySearchViewModel.swift; sourceTree = "<group>"; };
 		82B4CF901EAF77270003391D /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		82B4CF921EAF7D900003391D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		82DF09221EB226A100ACF0D1 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		82F188461EAFB76D0081A016 /* DataBaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseModels.swift; sourceTree = "<group>"; };
 		82F188491EAFBB440081A016 /* ServiceDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDatabase.swift; sourceTree = "<group>"; };
 		8F3ED6A21A248DC8EDEDE270 /* Pods-MEVTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEVTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MEVTestProject/Pods-MEVTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		8285A8011EAF516100A125E2 /* MEVTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				82DF09211EB2268400ACF0D1 /* RoutingViewControllers */,
 				82F188481EAFBB120081A016 /* ServiceDatabase */,
 				82B4CF851EAF626A0003391D /* Extension */,
 				8253D2071EAF5CED00275D94 /* Models */,
@@ -194,6 +197,14 @@
 			);
 			name = Extension;
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		82DF09211EB2268400ACF0D1 /* RoutingViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				82DF09221EB226A100ACF0D1 /* Router.swift */,
+			);
+			path = RoutingViewControllers;
 			sourceTree = "<group>";
 		};
 		82F188481EAFBB120081A016 /* ServiceDatabase */ = {
@@ -337,6 +348,7 @@
 				8285A8171EAF51C400A125E2 /* AppDelegate.swift in Sources */,
 				82B4CF8D1EAF71D40003391D /* DetailMovieViewModel.swift in Sources */,
 				8253D2041EAF581800275D94 /* SearchViewController.swift in Sources */,
+				82DF09231EB226A100ACF0D1 /* Router.swift in Sources */,
 				82B4CF8B1EAF71C30003391D /* HistorySearchViewController.swift in Sources */,
 				82B4CF911EAF77270003391D /* TabBarController.swift in Sources */,
 				82B4CF8F1EAF71F00003391D /* HistorySearchViewModel.swift in Sources */,

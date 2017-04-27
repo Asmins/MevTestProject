@@ -8,13 +8,6 @@
 
 import UIKit
 
-//class CustomTabBarController: UITabBarController {
-//
-//    override func awakeFromNib() {
-//      //  self.tabBar.backgroundColor = UIColor.red
-//    }
-//}
-
 extension UITabBarController {
     func setCustomTitle(_ viewController: UIViewController) {
         viewController.tabBarController?.navigationItem.title = viewController.tabBarItem.title!

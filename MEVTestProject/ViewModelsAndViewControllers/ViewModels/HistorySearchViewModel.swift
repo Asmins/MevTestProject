@@ -8,15 +8,14 @@
 import RealmSwift
 import Foundation
 
-class HistorySearchViewModel {
+protocol HistoryAction {
+    func openFeedScreen(_ movie: Movie)
+}
 
-    var view: HistorySearchViewController?
+class HistorySearchViewModel {
+    var delegate: HistoryAction?
     var result: Results<Request>?
     let serviceDataBase = ServiceDatabase()
-
-    init(_ view: HistorySearchViewController) {
-        self.view = view
-    }
 
     func getHistoryRequest() {
         let historyRequests = serviceDataBase.getObjectFromDataBase()
@@ -28,6 +27,6 @@ class HistorySearchViewModel {
         let movie = Movie((objectFromBD?.titleFilm)!, date: (objectFromBD?.dateReleased)!,
                           url: (objectFromBD?.posterURL)!, genre: (objectFromBD?.genre)!,
                           info: (objectFromBD?.infoAbout)!, actors: (objectFromBD?.actors)!)
-        self.view?.openDetailViewController(movie)
+        self.delegate?.openFeedScreen(movie)
     }
 }

@@ -10,12 +10,6 @@ import Foundation
 
 class DetailMovieViewModel {
 
-    private var view: DetailMovieViewController?
-
-    init(view: DetailMovieViewController) {
-        self.view = view
-    }
-
     private func checkPlaceholder(_ movie: Movie?) -> Bool {
         if movie == nil {
             return true
@@ -24,13 +18,13 @@ class DetailMovieViewModel {
         }
     }
 
-    func showOrHiddenPlaceholder(movie: Movie?) {
+    func showOrHiddenPlaceholder(movie: Movie?, firstAction: (Void) ->(),secondAction:(Void) ->() ) {
         let emptyMovie = self.checkPlaceholder(movie)
 
         if emptyMovie {
-            self.view?.showPlaceholder()
+            firstAction()
         } else {
-            self.view?.showFeed()
+            secondAction()
         }
     }
 }

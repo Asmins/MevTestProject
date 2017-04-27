@@ -22,17 +22,22 @@ class DetailMovieViewController: UIViewController {
 
     var movie: Movie?
 
-    var viewModel: DetailMovieViewModel?
+    var viewModel = DetailMovieViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = DetailMovieViewModel(view: self)
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel?.showOrHiddenPlaceholder(movie: movie)
+        self.viewModel.showOrHiddenPlaceholder(movie: movie
+            , firstAction: {
+                self.showPlaceholder()
+        }, secondAction: {
+            self.showFeed()
+        })
+
         self.tabBarController?.setCustomTitle(self)
     }
 
@@ -42,9 +47,7 @@ class DetailMovieViewController: UIViewController {
     }
 
     func settingView(_ movie: Movie) {
-        let stringURL = movie.getPosterURl()
-        let url = URL(string: stringURL)
-        self.posterImageView.sd_setImage(with: url!)
+        self.posterImageView.sd_setImage(with: URL(string: movie.getPosterURl()))
         self.actorsLabel.text = movie.getActors()
         self.dateReleaseLabel.text = movie.getDateMovie()
         self.genreLabel.text = movie.getGenre()

@@ -12,7 +12,6 @@ import RealmSwift
 class Request: Object {
     dynamic var title = ""
     dynamic var film: Film?
-
 }
 
 class Film: Object {
@@ -22,5 +21,4 @@ class Film: Object {
     dynamic var genre = ""
     dynamic var infoAbout = ""
     dynamic var actors = ""
-
 }
